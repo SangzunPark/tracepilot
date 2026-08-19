@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Test / lint / type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# VS Code local settings
+.vscode/
