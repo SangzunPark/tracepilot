@@ -9,6 +9,7 @@ mcp = MCPServer(
     version="0.1.0",
 )
 
+
 # tool 등록 파트
 # @mcp.tool()를 사용해서 일반 파이썬 함수를 MCP tool로 변환
 @mcp.tool(title="Get service status")
@@ -26,6 +27,7 @@ def get_service_status(service: str) -> dict[str, str]:
         "service": service,
         "status": "healthy",
     }
+
 
 # async는 함수 안에 기다림이 필요한 작업이 있다고 알림
 # 네트워크 속도와 하드웨어 속도는 큰 차이가 있기 때문에
@@ -48,8 +50,8 @@ async def main() -> None:
             print("Description:", tool.description)
             print("Input schema:", tool.input_schema)
             print("Output schema:", tool.output_schema)
-        
-        # 도구 호출, 성공의 경우 
+
+        # 도구 호출, 성공의 경우
         success = await client.call_tool(
             "get_service_status",
             {"service": "checkout-api"},
@@ -68,6 +70,7 @@ async def main() -> None:
         print("\nDomain failure:")
         print("is_error:", failure.is_error)
         print("content:", failure.content)
+
 
 # import 한 것이 아니라 해당 파일을 실행하는 경우 코드를 실행
 if __name__ == "__main__":

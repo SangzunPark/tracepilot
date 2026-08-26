@@ -32,6 +32,7 @@ def prepare(state: State) -> dict[str, object]:
         "counter": state["counter"] + 1,
     }
 
+
 # 이 함수에서 실행이 멈춤(설정) -> 사람에게 승인을 요청하는 구조
 def approval(state: State) -> dict[str, object]:
     print(">>> approval node entered")
@@ -46,10 +47,11 @@ def approval(state: State) -> dict[str, object]:
     )
 
     print(">>> interrupt returned:", decision)
-    # 나중에 resume 이후 실행 
+    # 나중에 resume 이후 실행
     return {
         "approved": bool(decision),
     }
+
 
 # 최종 상태를 출력
 def finish(state: State) -> dict[str, object]:
@@ -58,6 +60,7 @@ def finish(state: State) -> dict[str, object]:
     print(">>> approved:", state["approved"])
 
     return {}
+
 
 # 그래프 생성
 def build_graph(checkpointer: PostgresSaver):
@@ -71,7 +74,7 @@ def build_graph(checkpointer: PostgresSaver):
     builder.add_edge("prepare", "approval")
     builder.add_edge("approval", "finish")
     builder.add_edge("finish", END)
-# 단순 컴파일이 아닌 workflow 실행 상태를 postgreSQL 체커포인트에 저장
+    # 단순 컴파일이 아닌 workflow 실행 상태를 postgreSQL 체커포인트에 저장
     return builder.compile(checkpointer=checkpointer)
 
 
