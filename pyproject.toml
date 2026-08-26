@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "langgraph>=1.2.11",
+    "langgraph-checkpoint-postgres>=3.1.2",
+    "mcp[cli]>=2.0.0",
+    "psycopg[binary,pool]>=3.3.4",
+]
 
 [dependency-groups]
 dev = [
