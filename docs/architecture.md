@@ -71,15 +71,13 @@ Stores:
 
 ## Investigation Modes
 
-TracePilot exposes three investigation control policies over the same
-diagnostic domain and deterministic safety layer.
+TracePilot exposes three investigation control policies over the same diagnostic domain and deterministic safety layer.
 
 ### Fixed Playbook
 Uses a predefined investigation sequence.
 
 ### Plan Once
-Uses an LLM-generated initial plan, but plan revision is disabled after
-execution begins.
+Uses an LLM-generated initial plan, but plan revision is disabled after execution begins.
 
 ### Adaptive
 Uses the same underlying tool set and safety policies, but may revise the
@@ -106,8 +104,7 @@ non-control-policy conditions equivalent.
 
 ## Completion Validation
 
-The deterministic completion layer does not independently determine the
-semantic truth of a root-cause hypothesis.
+The deterministic completion layer does not independently determine the semantic truth of a root-cause hypothesis.
 
 It validates structural completion conditions such as:
 
@@ -118,8 +115,7 @@ It validates structural completion conditions such as:
 - budget and approval conditions are satisfied,
 - confirmed claims satisfy predefined evidence requirements.
 
-Semantic interpretation of observations and hypothesis formation remain
-LLM responsibilities.
+Semantic interpretation of observations and hypothesis formation remain LLM responsibilities.
 
 ## Approval Boundary
 
@@ -132,5 +128,4 @@ must be separated into distinct workflow stages.
         ↓
     execute_action
 
-The approval gate must not perform non-idempotent side effects before
-`interrupt()`.
+The approval gate must not perform non-idempotent side effects before `interrupt()`.

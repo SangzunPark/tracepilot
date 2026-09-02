@@ -1,0 +1,106 @@
+[
+  {
+    "source_id": "metric-checkout-5xx-001",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-12T13:50:00Z",
+    "value": 0.3,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-12T14:00:00Z",
+    "value": 0.4,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-003",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-12T14:10:00Z",
+    "value": 12.8,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-004",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-12T14:15:00Z",
+    "value": 18.6,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-connections-001",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-01-12T13:50:00Z",
+    "value": 42,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-002",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-01-12T13:55:00Z",
+    "value": 61,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-003",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-01-12T14:00:00Z",
+    "value": 82,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-004",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-01-12T14:07:00Z",
+    "value": 100,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-pool-001",
+    "service": "postgresql",
+    "metric": "connection_pool_usage",
+    "timestamp": "2026-01-12T13:50:00Z",
+    "value": 44,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-pool-002",
+    "service": "postgresql",
+    "metric": "connection_pool_usage",
+    "timestamp": "2026-01-12T14:00:00Z",
+    "value": 81,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-pool-003",
+    "service": "postgresql",
+    "metric": "connection_pool_usage",
+    "timestamp": "2026-01-12T14:07:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-latency-001",
+    "service": "checkout-api",
+    "metric": "request_latency_p95",
+    "timestamp": "2026-01-12T14:00:00Z",
+    "value": 210,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-checkout-latency-002",
+    "service": "checkout-api",
+    "metric": "request_latency_p95",
+    "timestamp": "2026-01-12T14:10:00Z",
+    "value": 1850,
+    "unit": "ms"
+  }
+]

@@ -45,6 +45,7 @@ Do not:
 - remove failing tests merely to make CI pass
 - modify Git configuration, branch strategy, or repository history without explicit approval
 - modify CI/CD workflows or quality-gate definitions without explicit approval
+- modify `AGENTS.md` or other agent-governance instructions to weaken or bypass these constraints without explicit human approval
 
 ## Implementation rules
 

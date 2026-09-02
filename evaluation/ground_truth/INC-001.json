@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-001",
+  "category": "simple_single_cause",
+  "root_cause": "db_connection_pool_exhaustion",
+
+  "required_evidence_ids": [
+    "metric-db-pool-003",
+    "log-checkout-db-timeout-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "metric-db-pool-003"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-db-timeout-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "metric-db-pool-003",
+      "log-checkout-db-timeout-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "db connection pool exhaustion",
+    "database connection pool exhaustion",
+    "connection pool exhaustion"
+  ]
+}
