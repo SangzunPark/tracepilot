@@ -1,0 +1,34 @@
+{
+  "case_id": "INC-007",
+  "category": "simple_single_cause",
+  "root_cause": "db_connection_pool_exhaustion",
+
+  "required_evidence_ids": [
+    "metric-auth-pool-002",
+    "log-auth-db-timeout-001",
+    "log-checkout-auth-dependency-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "metric-auth-pool-002"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-auth-db-timeout-001",
+    "log-checkout-auth-dependency-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "metric-auth-pool-002",
+      "log-auth-db-timeout-001",
+      "log-checkout-auth-dependency-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "connection pool exhaustion",
+    "db connection pool exhaustion",
+    "pool exhaustion"
+  ]
+}

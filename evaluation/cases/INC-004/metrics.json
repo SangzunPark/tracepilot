@@ -1,0 +1,66 @@
+[
+  {
+    "source_id": "metric-auth-login-success-001",
+    "service": "authentication-service",
+    "metric": "login_success_rate",
+    "timestamp": "2026-02-02T08:00:00Z",
+    "value": 99.8,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-login-success-002",
+    "service": "authentication-service",
+    "metric": "login_success_rate",
+    "timestamp": "2026-02-02T09:01:00Z",
+    "value": 4,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-db-failure-001",
+    "service": "authentication-service",
+    "metric": "db_auth_failure_rate",
+    "timestamp": "2026-02-02T08:00:00Z",
+    "value": 0,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-db-failure-002",
+    "service": "authentication-service",
+    "metric": "db_auth_failure_rate",
+    "timestamp": "2026-02-02T09:00:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-connections-001",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-02T08:45:00Z",
+    "value": 38,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-002",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-02T09:05:00Z",
+    "value": 39,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-checkout-pool-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-02T08:00:00Z",
+    "value": 40,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-02T09:05:00Z",
+    "value": 41,
+    "unit": "percent"
+  }
+]

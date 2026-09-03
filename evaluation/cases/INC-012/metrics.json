@@ -1,0 +1,50 @@
+[
+  {
+    "source_id": "metric-billing-gateway-auth-rejection-001",
+    "service": "billing-api",
+    "metric": "gateway_auth_rejection_rate",
+    "timestamp": "2026-03-30T12:30:00Z",
+    "value": 0,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-gateway-auth-rejection-002",
+    "service": "billing-api",
+    "metric": "gateway_auth_rejection_rate",
+    "timestamp": "2026-03-30T12:45:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-invoice-failure-001",
+    "service": "billing-api",
+    "metric": "invoice_submission_failure_rate",
+    "timestamp": "2026-03-30T12:30:00Z",
+    "value": 0,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-invoice-failure-002",
+    "service": "billing-api",
+    "metric": "invoice_submission_failure_rate",
+    "timestamp": "2026-03-30T12:55:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-001",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-03-30T12:30:00Z",
+    "value": 44,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-002",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-03-30T12:45:00Z",
+    "value": 46,
+    "unit": "percent"
+  }
+]

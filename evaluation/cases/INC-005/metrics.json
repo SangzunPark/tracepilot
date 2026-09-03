@@ -1,0 +1,66 @@
+[
+  {
+    "source_id": "metric-checkout-5xx-001",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-09T11:00:00Z",
+    "value": 0.3,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-09T11:25:00Z",
+    "value": 31.2,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-payment-gateway-latency-001",
+    "service": "payment-gateway",
+    "metric": "response_latency_p95",
+    "timestamp": "2026-02-09T11:00:00Z",
+    "value": 240,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-payment-gateway-latency-002",
+    "service": "payment-gateway",
+    "metric": "response_latency_p95",
+    "timestamp": "2026-02-09T11:15:00Z",
+    "value": 7100,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-checkout-pool-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-09T11:00:00Z",
+    "value": 40,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-09T11:25:00Z",
+    "value": 42,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-query-latency-001",
+    "service": "postgresql",
+    "metric": "query_latency_p95",
+    "timestamp": "2026-02-09T08:15:00Z",
+    "value": 42,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-db-query-latency-002",
+    "service": "postgresql",
+    "metric": "query_latency_p95",
+    "timestamp": "2026-02-09T11:25:00Z",
+    "value": 45,
+    "unit": "ms"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "case_id": "INC-007",
+  "title": "Authentication service connection timeouts",
+  "started_at": "2026-02-23T16:40:00Z",
+  "affected_services": [
+    "authentication-service",
+    "checkout-api"
+  ],
+  "symptom": "Checkout requests requiring login began failing."
+}

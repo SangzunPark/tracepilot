@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "log-checkout-healthy-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-09T08:20:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-healthy-002",
+    "service": "checkout-api",
+    "timestamp": "2026-02-09T11:00:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-payment-timeout-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-09T11:16:00Z",
+    "level": "ERROR",
+    "message": "Payment authorization request timed out after 8000ms"
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-09T11:20:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-02-09T11:25:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

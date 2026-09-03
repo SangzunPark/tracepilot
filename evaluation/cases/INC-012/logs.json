@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "log-billing-invoice-success-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:32:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-invoice-success-002",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:38:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-invoice-success-003",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:44:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-gateway-401-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:46:00Z",
+    "level": "ERROR",
+    "message": "Payment gateway rejected request: HTTP 401 unauthorized (client billing-api)"
+  },
+  {
+    "source_id": "log-billing-invoice-fail-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:50:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 401 unauthorized."
+  },
+  {
+    "source_id": "log-billing-invoice-fail-002",
+    "service": "billing-api",
+    "timestamp": "2026-03-30T12:55:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 401 unauthorized."
+  }
+]

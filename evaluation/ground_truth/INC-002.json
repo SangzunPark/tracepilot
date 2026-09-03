@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-002",
+  "category": "simple_single_cause",
+  "root_cause": "faulty_deployment",
+
+  "required_evidence_ids": [
+    "deploy-checkout-002",
+    "log-checkout-deploy-error-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "deploy-checkout-002"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-deploy-error-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "deploy-checkout-002",
+      "log-checkout-deploy-error-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "faulty deployment",
+    "bad deployment",
+    "deployment regression"
+  ]
+}

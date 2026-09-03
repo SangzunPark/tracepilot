@@ -1,0 +1,74 @@
+[
+  {
+    "source_id": "metric-checkout-5xx-001",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-19T13:30:00Z",
+    "value": 0.2,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-19T14:05:00Z",
+    "value": 9.4,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-003",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-01-19T14:10:00Z",
+    "value": 14.1,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-query-latency-001",
+    "service": "postgresql",
+    "metric": "query_latency_p95",
+    "timestamp": "2026-01-19T13:30:00Z",
+    "value": 120,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-db-query-latency-002",
+    "service": "postgresql",
+    "metric": "query_latency_p95",
+    "timestamp": "2026-01-19T13:45:00Z",
+    "value": 180,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-db-query-latency-003",
+    "service": "postgresql",
+    "metric": "query_latency_p95",
+    "timestamp": "2026-01-19T14:10:00Z",
+    "value": 182,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-checkout-pool-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-01-19T13:30:00Z",
+    "value": 38,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-01-19T14:00:00Z",
+    "value": 41,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-003",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-01-19T14:10:00Z",
+    "value": 42,
+    "unit": "percent"
+  }
+]

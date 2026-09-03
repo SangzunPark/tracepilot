@@ -1,0 +1,37 @@
+{
+  "case_id": "INC-006",
+  "category": "simple_single_cause",
+  "root_cause": "application_memory_regression",
+
+  "required_evidence_ids": [
+    "deploy-billing-002",
+    "metric-billing-memory-001",
+    "metric-billing-memory-004",
+    "log-billing-worker-restart-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "deploy-billing-002",
+    "metric-billing-memory-001",
+    "metric-billing-memory-004"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-billing-worker-restart-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "deploy-billing-002",
+      "metric-billing-memory-001",
+      "metric-billing-memory-004",
+      "log-billing-worker-restart-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "memory regression",
+    "memory leak",
+    "application regression"
+  ]
+}

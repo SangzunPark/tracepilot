@@ -65,24 +65,24 @@
   },
   {
     "source_id": "metric-db-pool-001",
-    "service": "postgresql",
-    "metric": "connection_pool_usage",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
     "timestamp": "2026-01-12T13:50:00Z",
     "value": 44,
     "unit": "percent"
   },
   {
     "source_id": "metric-db-pool-002",
-    "service": "postgresql",
-    "metric": "connection_pool_usage",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
     "timestamp": "2026-01-12T14:00:00Z",
     "value": 81,
     "unit": "percent"
   },
   {
     "source_id": "metric-db-pool-003",
-    "service": "postgresql",
-    "metric": "connection_pool_usage",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
     "timestamp": "2026-01-12T14:07:00Z",
     "value": 100,
     "unit": "percent"

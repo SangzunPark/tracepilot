@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-011",
+  "category": "wrong_initial_hypothesis",
+  "root_cause": "feature_flag_misconfiguration",
+
+  "required_evidence_ids": [
+    "flag-checkout-inventory-precheck-001",
+    "log-checkout-precheck-error-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "flag-checkout-inventory-precheck-001"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-precheck-error-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "flag-checkout-inventory-precheck-001",
+      "log-checkout-precheck-error-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "feature flag misconfiguration",
+    "misconfigured feature flag",
+    "inventory precheck flag"
+  ]
+}

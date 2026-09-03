@@ -1,0 +1,58 @@
+[
+  {
+    "source_id": "metric-checkout-5xx-001",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-03-16T10:00:00Z",
+    "value": 0.3,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-03-16T10:50:00Z",
+    "value": 24.1,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-connections-001",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-03-16T10:10:00Z",
+    "value": 48,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-002",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-03-16T10:15:00Z",
+    "value": 62,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-checkout-pool-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-03-16T10:00:00Z",
+    "value": 41,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-03-16T10:30:00Z",
+    "value": 84,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-003",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-03-16T10:38:00Z",
+    "value": 100,
+    "unit": "percent"
+  }
+]

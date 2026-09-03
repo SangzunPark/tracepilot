@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-003",
+  "category": "simple_single_cause",
+  "root_cause": "feature_flag_misconfiguration",
+
+  "required_evidence_ids": [
+    "flag-checkout-express-path-001",
+    "log-checkout-express-error-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "flag-checkout-express-path-001"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-express-error-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "flag-checkout-express-path-001",
+      "log-checkout-express-error-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "feature flag misconfiguration",
+    "misconfigured feature flag",
+    "feature flag caused"
+  ]
+}

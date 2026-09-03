@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "log-checkout-healthy-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:00:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-healthy-002",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:10:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-payment-retry-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:24:00Z",
+    "level": "WARN",
+    "message": "Payment gateway request succeeded after retry."
+  },
+  {
+    "source_id": "log-checkout-db-pool-timeout-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:40:00Z",
+    "level": "ERROR",
+    "message": "Timed out while acquiring a database connection."
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:45:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-03-16T10:50:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

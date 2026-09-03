@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-004",
+  "category": "simple_single_cause",
+  "root_cause": "database_credential_failure",
+
+  "required_evidence_ids": [
+    "metric-auth-db-failure-002",
+    "log-auth-db-reject-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "metric-auth-db-failure-002"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-auth-db-reject-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "metric-auth-db-failure-002",
+      "log-auth-db-reject-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "database credential failure",
+    "credential failure",
+    "database authentication failure"
+  ]
+}

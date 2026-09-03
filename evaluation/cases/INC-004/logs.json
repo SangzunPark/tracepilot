@@ -1,0 +1,30 @@
+[
+  {
+    "source_id": "log-auth-healthy-001",
+    "service": "authentication-service",
+    "timestamp": "2026-02-02T08:00:00Z",
+    "level": "INFO",
+    "message": "Login successful."
+  },
+  {
+    "source_id": "log-auth-healthy-002",
+    "service": "authentication-service",
+    "timestamp": "2026-02-02T08:30:00Z",
+    "level": "INFO",
+    "message": "Login successful."
+  },
+  {
+    "source_id": "log-auth-db-reject-001",
+    "service": "authentication-service",
+    "timestamp": "2026-02-02T09:00:00Z",
+    "level": "ERROR",
+    "message": "password authentication failed for user \"auth_service\""
+  },
+  {
+    "source_id": "log-checkout-auth-dependency-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-02T09:05:00Z",
+    "level": "ERROR",
+    "message": "Authentication service call failed: upstream unavailable."
+  }
+]

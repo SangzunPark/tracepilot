@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-010",
+  "title": "Checkout API elevated error rate",
+  "started_at": "2026-03-16T10:40:00Z",
+  "affected_services": [
+    "checkout-api"
+  ],
+  "symptom": "Checkout requests began returning elevated HTTP 500 responses."
+}

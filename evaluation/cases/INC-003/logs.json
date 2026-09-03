@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "log-checkout-healthy-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-26T15:00:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-healthy-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-26T15:10:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-express-error-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-26T15:22:00Z",
+    "level": "ERROR",
+    "message": "Express checkout path returned null shipping quote"
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-26T15:25:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-26T15:30:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]
