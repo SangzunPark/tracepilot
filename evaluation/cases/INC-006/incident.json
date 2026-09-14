@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-006",
+  "title": "Billing API worker restarts",
+  "started_at": "2026-02-16T09:45:00Z",
+  "affected_services": [
+    "billing-api"
+  ],
+  "symptom": "Billing API requests began failing as workers restarted repeatedly."
+}

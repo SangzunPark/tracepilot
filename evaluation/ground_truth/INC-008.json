@@ -1,0 +1,33 @@
+{
+  "case_id": "INC-008",
+  "category": "simple_single_cause",
+  "root_cause": "feature_flag_misconfiguration",
+
+  "required_evidence_ids": [
+    "flag-billing-invoice-batch-size-001",
+    "metric-billing-latency-002",
+    "log-billing-batch-timeout-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "flag-billing-invoice-batch-size-001"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-billing-batch-timeout-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "flag-billing-invoice-batch-size-001",
+      "metric-billing-latency-002",
+      "log-billing-batch-timeout-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "feature flag misconfiguration",
+    "misconfigured feature flag",
+    "batch size misconfiguration"
+  ]
+}

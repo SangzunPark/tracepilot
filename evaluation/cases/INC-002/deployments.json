@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "deploy-checkout-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T14:00:00Z",
+    "version": "3.1.0",
+    "status": "completed"
+  }
+]

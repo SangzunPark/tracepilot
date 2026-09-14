@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "status-payment-gateway-001",
+    "provider": "payment-gateway",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "status": "operational",
+    "message": "Payment gateway reporting operational status."
+  }
+]

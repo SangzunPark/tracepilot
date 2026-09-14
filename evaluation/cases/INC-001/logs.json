@@ -1,0 +1,65 @@
+[
+  {
+    "source_id": "log-checkout-normal-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T13:42:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T13:47:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-003",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T13:55:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-004",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:01:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-slow-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:06:00Z",
+    "level": "WARN",
+    "message": "Database connection acquisition latency is elevated."
+  },
+  {
+    "source_id": "log-checkout-db-timeout-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:09:00Z",
+    "level": "ERROR",
+    "message": "Timed out while acquiring a database connection."
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:10:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:12:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-003",
+    "service": "checkout-api",
+    "timestamp": "2026-01-12T14:14:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

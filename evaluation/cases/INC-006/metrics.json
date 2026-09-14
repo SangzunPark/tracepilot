@@ -1,0 +1,90 @@
+[
+  {
+    "source_id": "metric-billing-memory-001",
+    "service": "billing-api",
+    "metric": "memory_usage_percent",
+    "timestamp": "2026-02-16T08:05:00Z",
+    "value": 41,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-memory-002",
+    "service": "billing-api",
+    "metric": "memory_usage_percent",
+    "timestamp": "2026-02-16T08:30:00Z",
+    "value": 58,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-memory-003",
+    "service": "billing-api",
+    "metric": "memory_usage_percent",
+    "timestamp": "2026-02-16T09:00:00Z",
+    "value": 72,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-memory-004",
+    "service": "billing-api",
+    "metric": "memory_usage_percent",
+    "timestamp": "2026-02-16T09:30:00Z",
+    "value": 89,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-5xx-001",
+    "service": "billing-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-16T08:05:00Z",
+    "value": 0.2,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-5xx-002",
+    "service": "billing-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-16T10:00:00Z",
+    "value": 17.9,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-001",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-16T08:05:00Z",
+    "value": 42,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-002",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-16T09:30:00Z",
+    "value": 55,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-003",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-16T10:00:00Z",
+    "value": 58,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-db-connections-001",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-16T09:00:00Z",
+    "value": 50,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-002",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-16T09:40:00Z",
+    "value": 58,
+    "unit": "count"
+  }
+]

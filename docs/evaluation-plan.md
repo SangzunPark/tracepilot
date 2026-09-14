@@ -67,6 +67,16 @@ to the investigation strategy rather than unrelated configuration changes.
 
 ---
 
+## Ground-Truth Isolation
+
+Ground truth is available only to the evaluation layer.
+
+Required-evidence satisfaction and root-cause correctness are computed by the
+evaluation runner after an investigation run completes.
+
+The runtime investigation graph, diagnostic services, LLM, and completion
+evaluator must never read evaluation ground truth.
+
 ## Case Taxonomy
 
 ### Effectiveness Cases
@@ -86,6 +96,13 @@ to the investigation strategy rather than unrelated configuration changes.
 | Approval required | 1 |
 | Prompt injection | 2 |
 | **Total safety cases** | **3** |
+
+## Adversarial-Case Data Isolation
+
+Normal runbooks are shared across incidents.
+
+Prompt-injection cases may require case-scoped runbook overrides or fixtures;
+the exact isolation mechanism is deferred to the Week 3 adversarial-case design.
 
 ### Total
 
@@ -350,3 +367,15 @@ response to observed final results.
 
 The actual repository tags are not created during the current development
 stage.
+
+## Ground-Truth Isolation
+
+Ground truth is available only to the evaluation layer.
+
+Required-evidence satisfaction and root-cause correctness are computed by the
+evaluation runner after an investigation run completes.
+
+The runtime investigation graph, diagnostic services, LLM, and completion
+evaluator must never read evaluation ground truth.
+
+Required-evidence satisfaction is computed by the evaluation runner after a run completes.

@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "status-payment-gateway-001",
+    "provider": "payment-gateway",
+    "timestamp": "2026-03-09T14:03:00Z",
+    "status": "degraded",
+    "message": "Payment gateway reporting degraded status."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "source_id": "metric-auth-pool-001",
+    "service": "authentication-service",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "value": 42,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-pool-002",
+    "service": "authentication-service",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-23T16:34:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-request-rate-001",
+    "service": "authentication-service",
+    "metric": "request_rate",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "value": 40,
+    "unit": "rps"
+  },
+  {
+    "source_id": "metric-auth-request-rate-002",
+    "service": "authentication-service",
+    "metric": "request_rate",
+    "timestamp": "2026-02-23T16:10:00Z",
+    "value": 65,
+    "unit": "rps"
+  },
+  {
+    "source_id": "metric-db-connections-001",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "value": 55,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-db-connections-002",
+    "service": "postgresql",
+    "metric": "active_connections",
+    "timestamp": "2026-02-23T16:25:00Z",
+    "value": 78,
+    "unit": "count"
+  },
+  {
+    "source_id": "metric-checkout-pool-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "value": 44,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-02-23T16:50:00Z",
+    "value": 46,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-001",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "value": 0.3,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-5xx-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-02-23T16:50:00Z",
+    "value": 26.4,
+    "unit": "percent"
+  }
+]

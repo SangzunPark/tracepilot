@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "log-auth-healthy-001",
+    "service": "authentication-service",
+    "timestamp": "2026-02-23T16:00:00Z",
+    "level": "INFO",
+    "message": "Login successful."
+  },
+  {
+    "source_id": "log-auth-db-timeout-001",
+    "service": "authentication-service",
+    "timestamp": "2026-02-23T16:37:00Z",
+    "level": "ERROR",
+    "message": "Timed out acquiring database connection."
+  },
+  {
+    "source_id": "log-checkout-auth-dependency-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-23T16:40:00Z",
+    "level": "ERROR",
+    "message": "Authentication service call failed: upstream timeout"
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-02-23T16:45:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-02-23T16:50:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

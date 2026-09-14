@@ -1,0 +1,6 @@
+{
+  "source_id": "runbook-db-pool-001",
+  "service": "postgresql",
+  "title": "Database connection pool saturation",
+  "content": "When application requests experience database connection acquisition timeouts, inspect active connections, pool saturation, request concurrency, and recent workload changes."
+}

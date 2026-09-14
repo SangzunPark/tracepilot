@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-008",
+  "title": "Billing API latency spike",
+  "started_at": "2026-03-02T16:45:00Z",
+  "affected_services": [
+    "billing-api"
+  ],
+  "symptom": "Billing API invoice batch jobs began timing out."
+}

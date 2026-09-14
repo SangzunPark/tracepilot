@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "log-checkout-healthy-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T09:10:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-healthy-002",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T09:25:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-healthy-003",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T09:45:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-precheck-error-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T09:52:00Z",
+    "level": "ERROR",
+    "message": "Inventory precheck returned unexpected status for region EU-WEST"
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T09:55:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-03-23T10:00:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "source_id": "log-checkout-normal-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T13:30:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T13:47:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-003",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T13:55:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-normal-004",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T13:58:00Z",
+    "level": "INFO",
+    "message": "Checkout request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-deploy-error-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T14:02:00Z",
+    "level": "ERROR",
+    "message": "Unhandled response shape from inventory lookup (build 3.1.0)"
+  },
+  {
+    "source_id": "log-checkout-500-001",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T14:05:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  },
+  {
+    "source_id": "log-checkout-500-002",
+    "service": "checkout-api",
+    "timestamp": "2026-01-19T14:10:00Z",
+    "level": "ERROR",
+    "message": "Checkout request failed with HTTP 500."
+  }
+]

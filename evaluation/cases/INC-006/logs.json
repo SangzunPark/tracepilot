@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "log-billing-healthy-001",
+    "service": "billing-api",
+    "timestamp": "2026-02-16T08:05:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-healthy-002",
+    "service": "billing-api",
+    "timestamp": "2026-02-16T08:30:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-worker-restart-001",
+    "service": "billing-api",
+    "timestamp": "2026-02-16T09:45:00Z",
+    "level": "ERROR",
+    "message": "Worker terminated: heap limit exceeded, restarting"
+  },
+  {
+    "source_id": "log-billing-invoice-fail-001",
+    "service": "billing-api",
+    "timestamp": "2026-02-16T09:50:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 500."
+  },
+  {
+    "source_id": "log-billing-invoice-fail-002",
+    "service": "billing-api",
+    "timestamp": "2026-02-16T10:00:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 500."
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-009",
+  "category": "wrong_initial_hypothesis",
+  "root_cause": "external_gateway_failure",
+
+  "required_evidence_ids": [
+    "status-payment-gateway-001",
+    "log-checkout-payment-timeout-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "status-payment-gateway-001"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-payment-timeout-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "status-payment-gateway-001",
+      "log-checkout-payment-timeout-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "external gateway failure",
+    "payment gateway outage",
+    "gateway degradation caused"
+  ]
+}

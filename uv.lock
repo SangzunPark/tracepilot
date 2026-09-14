@@ -1580,6 +1580,7 @@ dependencies = [
     { name = "langgraph-checkpoint-postgres" },
     { name = "mcp", extra = ["cli"] },
     { name = "psycopg", extra = ["binary", "pool"] },
+    { name = "pydantic" },
 ]
 
 [package.dev-dependencies]
@@ -1595,6 +1596,7 @@ requires-dist = [
     { name = "langgraph-checkpoint-postgres", specifier = ">=3.1.2" },
     { name = "mcp", extras = ["cli"], specifier = ">=2.0.0" },
     { name = "psycopg", extras = ["binary", "pool"], specifier = ">=3.3.4" },
+    { name = "pydantic", specifier = ">=2.13.4" },
 ]
 
 [package.metadata.requires-dev]

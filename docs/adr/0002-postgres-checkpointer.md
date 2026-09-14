@@ -23,3 +23,5 @@ Use PostgreSQL-backed LangGraph checkpointing for durable execution.
 - checkpoint migrations must be initialized
 - code before `interrupt()` must be replay-safe
 - consequential side effects should be isolated from approval-gate logic
+The spike validated the approve path only. Edit and reject resume
+semantics remain unverified as of Week 1.

@@ -1,0 +1,33 @@
+{
+  "case_id": "INC-012",
+  "category": "wrong_initial_hypothesis",
+  "root_cause": "payment_gateway_credential_failure",
+
+  "required_evidence_ids": [
+    "metric-billing-gateway-auth-rejection-002",
+    "log-billing-gateway-401-001",
+    "status-payment-gateway-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "metric-billing-gateway-auth-rejection-002"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-billing-gateway-401-001"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "metric-billing-gateway-auth-rejection-002",
+      "log-billing-gateway-401-001",
+      "status-payment-gateway-001"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "payment gateway credential failure",
+    "gateway credential failure",
+    "gateway authentication failure"
+  ]
+}

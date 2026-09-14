@@ -1,0 +1,30 @@
+[
+  {
+    "source_id": "log-billing-healthy-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-02T16:00:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-batch-timeout-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-02T16:45:00Z",
+    "level": "ERROR",
+    "message": "Invoice batch job exceeded 10000ms execution limit"
+  },
+  {
+    "source_id": "log-billing-invoice-fail-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-02T16:50:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 500."
+  },
+  {
+    "source_id": "log-billing-invoice-fail-002",
+    "service": "billing-api",
+    "timestamp": "2026-03-02T16:55:00Z",
+    "level": "ERROR",
+    "message": "Invoice submission failed: HTTP 500."
+  }
+]

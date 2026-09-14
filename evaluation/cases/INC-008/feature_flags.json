@@ -1,0 +1,10 @@
+[
+  {
+    "source_id": "flag-billing-invoice-batch-size-001",
+    "service": "billing-api",
+    "timestamp": "2026-03-02T16:40:00Z",
+    "flag_name": "billing_invoice_batch_size",
+    "old_value": "50",
+    "new_value": "5000"
+  }
+]

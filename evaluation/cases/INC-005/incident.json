@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-005",
+  "title": "Checkout API HTTP 500 spike",
+  "started_at": "2026-02-09T11:16:00Z",
+  "affected_services": [
+    "checkout-api"
+  ],
+  "symptom": "Checkout requests began returning elevated HTTP 500 responses."
+}
