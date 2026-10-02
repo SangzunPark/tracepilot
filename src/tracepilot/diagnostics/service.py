@@ -2,7 +2,7 @@
 # DiagnosticService는 읽어온 데이터 중에서 필요한 것만 골라주는 역할
 
 # 시간 범위 다루기 위해 임포트
-from datetime import datetime
+from datetime import UTC, datetime
 
 # 사용할 에러 목록
 from tracepilot.diagnostics.errors import (
@@ -26,6 +26,14 @@ from tracepilot.domain.models import (
 
 # 실제 JSON 파일을 읽어오는 계층
 from tracepilot.domain.repository import CaseRepository
+
+
+# 모든 비교를 UTC 기준으로 맞추는 helper
+def _as_utc(value: datetime) -> datetime:
+    if value.tzinfo is None:
+        return value.replace(tzinfo=UTC)
+
+    return value.astimezone(UTC)
 
 
 # 이 파일의 핵심, Incident 조사용 검색 기능 모음
@@ -210,7 +218,14 @@ class DiagnosticService:
         start_time: datetime | None,
         end_time: datetime | None,
     ) -> None:
-        if start_time is not None and end_time is not None and start_time > end_time:
+        normalized_start = _as_utc(start_time) if start_time is not None else None
+        normalized_end = _as_utc(end_time) if end_time is not None else None
+
+        if (
+            normalized_start is not None
+            and normalized_end is not None
+            and normalized_start > normalized_end
+        ):
             raise InvalidTimeRangeError(f"start_time {start_time!r} is after end_time {end_time!r}")
 
     # limit이 정상인지 검사
@@ -226,8 +241,14 @@ class DiagnosticService:
         start_time: datetime | None,
         end_time: datetime | None,
     ) -> bool:
-        if start_time is not None and timestamp < start_time:
+        normalized_timestamp = _as_utc(timestamp)
+        normalized_start = _as_utc(start_time) if start_time is not None else None
+        normalized_end = _as_utc(end_time) if end_time is not None else None
+
+        if normalized_start is not None and normalized_timestamp < normalized_start:
             return False
-        if end_time is not None and timestamp > end_time:
+
+        if normalized_end is not None and normalized_timestamp > normalized_end:
             return False
+
         return True

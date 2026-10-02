@@ -74,3 +74,29 @@ root-cause aliases are checked only against case-specific data.
 ### Lessons learned
 "Agent-visible" is not one category. Case-scoped observable data and
 shared organizational knowledge have different leakage semantics.
+
+### Issue
+Path traversal via case_id in CaseRepository (Week 3, Session 3.1)
+
+### Finding
+Read-only review found that case_id="../ground_truth" resolved to
+evaluation/ground_truth/. The ground-truth boundary relied on
+CaseRepository having no load_ground_truth() method, but path
+construction from an untrusted string bypassed it. All 349 existing
+tests passed; no test covered this.
+
+### Why it matters
+From Week 4, case_id is supplied by the LLM through MCP. A malformed
+or injected value could reach the answer key.
+
+### Fix
+CaseRepository rejects any case_id that is not a single path component.
+
+### Verification
+Confirmed at three layers: repository raises FileNotFoundError,
+DiagnosticService maps it to CaseNotFoundError (public contract
+unchanged), MCP client receives is_error=True.
+
+### Lessons learned
+Removing a method is not a boundary if the path itself is built from
+untrusted input.
