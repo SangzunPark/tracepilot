@@ -12,7 +12,10 @@ or a dict key -- count as a dependency.
 import ast
 from pathlib import Path
 
+import pytest
+
 import tracepilot.domain
+from tests.domain.support import EVALUATION_ROOT
 from tracepilot.domain.repository import CaseRepository
 
 DocNode = ast.FunctionDef | ast.AsyncFunctionDef | ast.ClassDef | ast.Module
@@ -61,3 +64,50 @@ def test_domain_package_does_not_reference_ground_truth_path() -> None:
 
     offending = [path for path in domain_dir.rglob("*.py") if _code_references_ground_truth(path)]
     assert not offending, f"domain code references ground_truth: {offending}"
+
+
+@pytest.mark.parametrize(
+    "unsafe_case_id",
+    [
+        "../ground_truth",
+        "../../outside",
+        "nested/case",
+        r"..\ground_truth",
+        r"nested\case",
+        "/tmp/absolute-case",
+        "",
+        ".",
+        "..",
+    ],
+)
+def test_case_repository_rejects_case_ids_that_escape_cases_directory(
+    unsafe_case_id: str,
+) -> None:
+    repository = CaseRepository(EVALUATION_ROOT)
+
+    with pytest.raises(FileNotFoundError):
+        repository.load_manifest(unsafe_case_id)
+
+
+def test_case_repository_accepts_single_component_case_id() -> None:
+    repository = CaseRepository(EVALUATION_ROOT)
+
+    manifest = repository.load_manifest("INC-001")
+
+    assert manifest.case_id == "INC-001"
+
+
+# regression test 추가
+# tmp_path는 pytest fixture
+
+
+def test_default_repository_is_independent_of_current_working_directory(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    monkeypatch.chdir(tmp_path)
+
+    repository = CaseRepository()
+    manifest = repository.load_manifest("INC-001")
+
+    assert manifest.case_id == "INC-001"

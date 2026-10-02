@@ -15,6 +15,7 @@ from tracepilot.domain.models import (
 )
 
 ModelT = TypeVar("ModelT", bound=BaseModel)
+DEFAULT_EVALUATION_ROOT = Path(__file__).resolve().parents[3] / "evaluation"
 
 
 class CaseRepository:
@@ -24,8 +25,10 @@ class CaseRepository:
     Deliberately has no knowledge of `evaluation/ground_truth/`.
     """
 
-    def __init__(self, evaluation_root: str | Path = "evaluation") -> None:
-        self._root = Path(evaluation_root)
+    def __init__(self, evaluation_root: str | Path | None = None) -> None:
+        self._root = (
+            Path(evaluation_root) if evaluation_root is not None else DEFAULT_EVALUATION_ROOT
+        )
 
     def load_manifest(self, case_id: str) -> IncidentManifest:
         path = self._case_dir(case_id) / "incident.json"
@@ -56,6 +59,15 @@ class CaseRepository:
         ]
 
     def _case_dir(self, case_id: str) -> Path:
+        if (
+            not case_id
+            or case_id in {".", ".."}
+            or "/" in case_id
+            or "\\" in case_id
+            or Path(case_id).is_absolute()
+        ):
+            raise FileNotFoundError(case_id)
+
         return self._root / "cases" / case_id
 
     @staticmethod
