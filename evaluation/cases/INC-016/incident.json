@@ -1,0 +1,10 @@
+{
+  "case_id": "INC-016",
+  "title": "Login failures affecting checkout",
+  "started_at": "2026-04-27T09:15:00Z",
+  "affected_services": [
+    "authentication-service",
+    "checkout-api"
+  ],
+  "symptom": "Users experienced login failures and checkout requests requiring authentication also began failing."
+}

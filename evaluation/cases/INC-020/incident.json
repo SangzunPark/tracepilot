@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-020",
+  "title": "Billing API invoice submission failures",
+  "started_at": "2026-05-25T11:20:00Z",
+  "affected_services": [
+    "billing-api"
+  ],
+  "symptom": "Invoice submissions began timing out and failing."
+}

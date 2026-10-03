@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "log-billing-gateway-timeout-015",
+    "service": "billing-api",
+    "timestamp": "2026-04-20T16:07:00Z",
+    "level": "ERROR",
+    "message": "Payment gateway request timed out after 8000ms."
+  }
+]

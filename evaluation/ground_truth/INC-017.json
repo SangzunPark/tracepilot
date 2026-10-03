@@ -1,0 +1,39 @@
+{
+  "case_id": "INC-017",
+  "category": "conflicting_evidence",
+  "root_cause": "external_gateway_failure",
+
+  "required_evidence_ids": [
+    "external-gateway-degraded-017",
+    "log-checkout-gateway-timeout-017",
+    "log-checkout-success-017-001"
+  ],
+
+  "temporal_evidence_ids": [
+    "external-gateway-degraded-017",
+    "metric-gateway-latency-017"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-gateway-timeout-017"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "external-gateway-degraded-017",
+      "log-checkout-gateway-timeout-017",
+      "log-checkout-success-017-001"
+    ],
+    [
+      "external-gateway-degraded-017",
+      "log-checkout-gateway-timeout-017",
+      "log-checkout-success-017-002"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "external gateway failure",
+    "payment gateway outage",
+    "gateway failure"
+  ]
+}

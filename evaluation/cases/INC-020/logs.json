@@ -1,0 +1,16 @@
+[
+  {
+    "source_id": "log-billing-healthy-020",
+    "service": "billing-api",
+    "timestamp": "2026-05-25T11:00:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-020-001",
+    "service": "billing-api",
+    "timestamp": "2026-05-25T11:16:00Z",
+    "level": "ERROR",
+    "message": "Payment gateway request timed out after 8000ms."
+  }
+]

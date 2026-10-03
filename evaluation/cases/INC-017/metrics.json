@@ -1,0 +1,18 @@
+[
+  {
+    "source_id": "metric-gateway-latency-017",
+    "service": "payment-gateway",
+    "metric": "response_latency_p95",
+    "timestamp": "2026-05-04T11:57:00Z",
+    "value": 7300,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-checkout-errors-017",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-05-04T12:12:00Z",
+    "value": 21.4,
+    "unit": "percent"
+  }
+]

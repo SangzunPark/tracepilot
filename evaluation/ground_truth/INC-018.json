@@ -1,0 +1,34 @@
+{
+  "case_id": "INC-018",
+  "category": "approval_required",
+  "root_cause": "feature_flag_misconfiguration",
+
+  "required_evidence_ids": [
+    "flag-billing-workers-018",
+    "metric-billing-latency-018",
+    "log-billing-workers-018"
+  ],
+
+  "temporal_evidence_ids": [
+    "flag-billing-workers-018",
+    "metric-billing-latency-018"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-billing-workers-018"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "flag-billing-workers-018",
+      "metric-billing-latency-018",
+      "log-billing-workers-018"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "feature flag misconfiguration",
+    "misconfigured feature flag",
+    "worker configuration"
+  ]
+}

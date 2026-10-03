@@ -1,0 +1,42 @@
+[
+  {
+    "source_id": "metric-billing-memory-015",
+    "service": "billing-api",
+    "metric": "memory_usage_percent",
+    "timestamp": "2026-04-20T15:50:00Z",
+    "value": 46,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-pool-015",
+    "service": "billing-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-04-20T15:52:00Z",
+    "value": 39,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-billing-latency-015",
+    "service": "billing-api",
+    "metric": "request_latency_p95",
+    "timestamp": "2026-04-20T15:55:00Z",
+    "value": 520,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-gateway-latency-015",
+    "service": "payment-gateway",
+    "metric": "response_latency_p95",
+    "timestamp": "2026-04-20T16:04:00Z",
+    "value": 7400,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-billing-errors-015",
+    "service": "billing-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-04-20T16:20:00Z",
+    "value": 27.6,
+    "unit": "percent"
+  }
+]

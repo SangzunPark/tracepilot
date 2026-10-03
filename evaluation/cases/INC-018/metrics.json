@@ -1,0 +1,18 @@
+[
+  {
+    "source_id": "metric-billing-latency-018",
+    "service": "billing-api",
+    "metric": "request_latency_p95",
+    "timestamp": "2026-05-11T09:21:00Z",
+    "value": 8800,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-billing-errors-018",
+    "service": "billing-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-05-11T09:30:00Z",
+    "value": 18.7,
+    "unit": "percent"
+  }
+]

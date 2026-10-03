@@ -1,0 +1,18 @@
+[
+  {
+    "source_id": "metric-checkout-019-001",
+    "service": "checkout-api",
+    "metric": "request_latency_p95",
+    "timestamp": "2026-05-18T14:05:00Z",
+    "value": 1650,
+    "unit": "ms"
+  },
+  {
+    "source_id": "metric-checkout-019-002",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-05-18T14:22:00Z",
+    "value": 25.2,
+    "unit": "percent"
+  }
+]

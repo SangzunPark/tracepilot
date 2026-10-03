@@ -1,0 +1,42 @@
+[
+  {
+    "source_id": "metric-auth-pool-014-001",
+    "service": "authentication-service",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-04-13T10:18:00Z",
+    "value": 82,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-pool-014-002",
+    "service": "authentication-service",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-04-13T10:22:00Z",
+    "value": 100,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-errors-014",
+    "service": "checkout-api",
+    "metric": "http_5xx_rate",
+    "timestamp": "2026-04-13T10:38:00Z",
+    "value": 23.8,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-014-001",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-04-13T10:18:00Z",
+    "value": 38,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-checkout-pool-014-002",
+    "service": "checkout-api",
+    "metric": "db_connection_pool_usage",
+    "timestamp": "2026-04-13T10:38:00Z",
+    "value": 40,
+    "unit": "percent"
+  }
+]

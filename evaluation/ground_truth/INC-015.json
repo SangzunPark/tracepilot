@@ -1,0 +1,34 @@
+{
+  "case_id": "INC-015",
+  "category": "recovery",
+  "root_cause": "external_gateway_failure",
+
+  "required_evidence_ids": [
+    "external-gateway-degraded-015",
+    "metric-gateway-latency-015",
+    "log-billing-gateway-timeout-015"
+  ],
+
+  "temporal_evidence_ids": [
+    "external-gateway-degraded-015",
+    "metric-gateway-latency-015"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-billing-gateway-timeout-015"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "external-gateway-degraded-015",
+      "metric-gateway-latency-015",
+      "log-billing-gateway-timeout-015"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "external gateway failure",
+    "payment gateway outage",
+    "gateway failure"
+  ]
+}

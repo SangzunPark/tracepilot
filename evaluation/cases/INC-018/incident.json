@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-018",
+  "title": "Billing API slowdown and payment failures",
+  "started_at": "2026-05-11T09:22:00Z",
+  "affected_services": [
+    "billing-api"
+  ],
+  "symptom": "Billing requests became slow and payment-related failures increased."
+}

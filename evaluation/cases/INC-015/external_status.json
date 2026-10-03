@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "external-gateway-degraded-015",
+    "provider": "payment-gateway",
+    "timestamp": "2026-04-20T16:03:00Z",
+    "status": "degraded",
+    "message": "Payment gateway reporting degraded status."
+  }
+]

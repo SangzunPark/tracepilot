@@ -1,0 +1,39 @@
+{
+  "case_id": "INC-013",
+  "category": "recovery",
+  "root_cause": "faulty_deployment",
+
+  "required_evidence_ids": [
+    "deploy-checkout-013",
+    "metric-checkout-latency-013-001",
+    "log-checkout-version-error-013"
+  ],
+
+  "temporal_evidence_ids": [
+    "deploy-checkout-013",
+    "metric-checkout-latency-013-001"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-checkout-version-error-013"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "deploy-checkout-013",
+      "metric-checkout-latency-013-001",
+      "log-checkout-version-error-013"
+    ],
+    [
+      "deploy-checkout-013",
+      "metric-checkout-errors-013-001",
+      "log-checkout-version-error-013"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "faulty deployment",
+    "bad deployment",
+    "deployment regression"
+  ]
+}

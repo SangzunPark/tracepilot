@@ -1,0 +1,30 @@
+[
+  {
+    "source_id": "log-checkout-cache-warning-017",
+    "service": "checkout-api",
+    "timestamp": "2026-05-04T11:44:00Z",
+    "level": "WARN",
+    "message": "Cache metadata version mismatch detected; fallback path used successfully"
+  },
+  {
+    "source_id": "log-checkout-success-017-001",
+    "service": "checkout-api",
+    "timestamp": "2026-05-04T11:45:00Z",
+    "level": "INFO",
+    "message": "Checkout payment request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-success-017-002",
+    "service": "checkout-api",
+    "timestamp": "2026-05-04T11:50:00Z",
+    "level": "INFO",
+    "message": "Checkout payment request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-gateway-timeout-017",
+    "service": "checkout-api",
+    "timestamp": "2026-05-04T12:00:00Z",
+    "level": "ERROR",
+    "message": "Payment gateway request timed out after 8000ms."
+  }
+]
