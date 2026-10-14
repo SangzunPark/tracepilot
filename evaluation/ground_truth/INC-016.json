@@ -1,0 +1,31 @@
+{
+  "case_id": "INC-016",
+  "category": "insufficient_evidence",
+  "root_cause": "database_credential_failure",
+
+  "required_evidence_ids": [
+    "metric-auth-backend-failure-016",
+    "log-auth-db-rejection-016"
+  ],
+
+  "temporal_evidence_ids": [
+    "metric-auth-backend-failure-016"
+  ],
+
+  "mechanistic_evidence_ids": [
+    "log-auth-db-rejection-016"
+  ],
+
+  "acceptable_evidence_sets": [
+    [
+      "metric-auth-backend-failure-016",
+      "log-auth-db-rejection-016"
+    ]
+  ],
+
+  "leakage_aliases": [
+    "database credential failure",
+    "credential failure",
+    "database authentication failure"
+  ]
+}

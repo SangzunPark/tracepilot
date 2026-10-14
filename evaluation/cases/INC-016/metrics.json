@@ -1,0 +1,26 @@
+[
+  {
+    "source_id": "metric-auth-login-success-016-001",
+    "service": "authentication-service",
+    "metric": "login_success_rate",
+    "timestamp": "2026-04-27T09:08:00Z",
+    "value": 91.0,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-login-success-016-002",
+    "service": "authentication-service",
+    "metric": "login_success_rate",
+    "timestamp": "2026-04-27T09:22:00Z",
+    "value": 6.0,
+    "unit": "percent"
+  },
+  {
+    "source_id": "metric-auth-backend-failure-016",
+    "service": "authentication-service",
+    "metric": "backend_request_failure_rate",
+    "timestamp": "2026-04-27T09:12:00Z",
+    "value": 64.0,
+    "unit": "percent"
+  }
+]

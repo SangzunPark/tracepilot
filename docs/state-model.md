@@ -22,6 +22,39 @@ Candidate fields:
 - approval_status
 - completion_status
 
+## Week 4 Interim State Contract
+
+The Week 4 Three Modes runtime uses a compact, serializable interim state:
+
+- case_id
+- mode
+- initial_context
+- plan
+- plan_version
+- current_step_index
+- bounded tool-call / observation records
+- step_count
+- open_questions
+- lightweight working_hypothesis
+- termination_reason
+
+The candidate fields above remain the longer-term design.
+
+Tool-call / observation records are kept inline, compact, and bounded only until
+durable tool-run storage exists. The principle that large raw tool results stay
+out of graph state still applies.
+
+Explicitly deferred to Week 5/6, and not designed here:
+
+- full Evidence model/provenance
+- durable Hypothesis records
+- PlanRevision durable records
+- PostgreSQL tool-run/history storage
+- retry counts
+- approval state
+- deterministic completion status
+- recovery/injection instrumentation
+
 ## State Storage Principle
 
 Active working data may remain inline when it is small and required for the next graph decision; historical or audit data should live in durable records and be referenced by ID.

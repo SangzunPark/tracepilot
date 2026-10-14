@@ -47,6 +47,14 @@ Do not:
 - modify CI/CD workflows or quality-gate definitions without explicit approval
 - modify `AGENTS.md` or other agent-governance instructions to weaken or bypass these constraints without explicit human approval
 
+## Language rules
+
+- Identifiers, docstrings, documentation, commit messages, and PR descriptions should be written in English.
+- User-authored Korean comments are learning and explanatory notes and must be preserved as written.
+- Do not delete, translate, or require a special prefix for existing user-authored Korean comments.
+- New comments written by the Coding Agent should normally be in English.
+- If an existing Korean comment appears inconsistent with the code, report the inconsistency instead of silently rewriting the comment.
+
 ## Implementation rules
 
 Prefer:

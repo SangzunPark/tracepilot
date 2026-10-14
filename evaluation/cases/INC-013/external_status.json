@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "external-gateway-013",
+    "provider": "payment-gateway",
+    "timestamp": "2026-04-06T14:05:00Z",
+    "status": "operational",
+    "message": "Payment gateway operating normally."
+  }
+]

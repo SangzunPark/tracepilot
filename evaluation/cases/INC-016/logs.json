@@ -1,0 +1,23 @@
+[
+  {
+    "source_id": "log-auth-healthy-016",
+    "service": "authentication-service",
+    "timestamp": "2026-04-27T08:55:00Z",
+    "level": "INFO",
+    "message": "Login request completed successfully."
+  },
+  {
+    "source_id": "log-checkout-auth-delay-016",
+    "service": "checkout-api",
+    "timestamp": "2026-04-27T09:05:00Z",
+    "level": "WARN",
+    "message": "Authentication service call slow; request completed after retry."
+  },
+  {
+    "source_id": "log-auth-db-rejection-016",
+    "service": "authentication-service",
+    "timestamp": "2026-04-27T09:13:00Z",
+    "level": "ERROR",
+    "message": "password authentication failed for user \"auth_service\""
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-017",
+  "title": "Checkout API payment request failures",
+  "started_at": "2026-05-04T12:05:00Z",
+  "affected_services": [
+    "checkout-api"
+  ],
+  "symptom": "Checkout payment requests began timing out and failing."
+}

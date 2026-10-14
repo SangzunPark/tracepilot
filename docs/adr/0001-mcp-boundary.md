@@ -20,9 +20,12 @@ using the MCP Python SDK's in-memory client/server test path.
 
 Use MCP as the diagnostic capability boundary.
 
-The production transport remains deferred until the Week 3 MCP integration.
+The production transport was deferred to the Week 3 MCP integration. Week 3
+selected and implemented stdio as the production MCP process boundary: the
+diagnostic server runs as a subprocess via `python -m tracepilot.mcp`, and
+`src/tracepilot/mcp/__main__.py` is the only production location that starts
+the server.
 
 ## Consequence
 
-Week 3 must explicitly choose and document the runtime transport before the
-production diagnostic server is finalized.
+The Week 3 transport decision is recorded above.

@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-014",
+  "title": "Checkout API login-dependent request failures",
+  "started_at": "2026-04-13T10:30:00Z",
+  "affected_services": [
+    "checkout-api"
+  ],
+  "symptom": "Checkout requests requiring authentication began failing."
+}

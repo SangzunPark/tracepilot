@@ -1,0 +1,16 @@
+[
+  {
+    "source_id": "log-billing-healthy-018",
+    "service": "billing-api",
+    "timestamp": "2026-05-11T09:00:00Z",
+    "level": "INFO",
+    "message": "Invoice submitted successfully."
+  },
+  {
+    "source_id": "log-billing-workers-018",
+    "service": "billing-api",
+    "timestamp": "2026-05-11T09:24:00Z",
+    "level": "ERROR",
+    "message": "Concurrent charge worker limit exceeded downstream request capacity"
+  }
+]

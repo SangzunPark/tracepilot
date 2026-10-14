@@ -1,0 +1,9 @@
+{
+  "case_id": "INC-013",
+  "title": "Checkout API latency and error increase",
+  "started_at": "2026-04-06T14:05:00Z",
+  "affected_services": [
+    "checkout-api"
+  ],
+  "symptom": "Checkout requests began showing elevated latency and failures."
+}

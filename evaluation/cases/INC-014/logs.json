@@ -1,0 +1,23 @@
+[
+  {
+    "source_id": "log-auth-healthy-014",
+    "service": "authentication-service",
+    "timestamp": "2026-04-13T10:00:00Z",
+    "level": "INFO",
+    "message": "Login request completed successfully."
+  },
+  {
+    "source_id": "log-auth-db-timeout-014",
+    "service": "authentication-service",
+    "timestamp": "2026-04-13T10:24:00Z",
+    "level": "ERROR",
+    "message": "Timed out acquiring database connection."
+  },
+  {
+    "source_id": "log-checkout-auth-timeout-014",
+    "service": "checkout-api",
+    "timestamp": "2026-04-13T10:27:00Z",
+    "level": "ERROR",
+    "message": "Authentication service call failed: upstream timeout"
+  }
+]
