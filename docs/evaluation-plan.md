@@ -32,6 +32,10 @@ Uses a predefined diagnostic sequence.
 The diagnostic order is fixed before execution and does not change in
 response to observations.
 
+It is one global deterministic playbook, not one playbook per incident
+category, and uses no LLM planning or replanning (see
+`docs/architecture.md`, Investigation Modes).
+
 ### Plan Once
 
 Generates one initial investigation plan before execution begins.
@@ -39,11 +43,17 @@ Generates one initial investigation plan before execution begins.
 The plan cannot be revised after execution begins, even when later
 observations weaken or invalidate assumptions underlying the original plan.
 
+The plan contains fully specified tool names and arguments before execution.
+Observations do not change the plan or later tool arguments.
+
 ### Adaptive
 
 Generates an initial investigation plan and may revise hypotheses, open
 questions, investigation steps, and next-tool choices when observations
 invalidate assumptions underlying the current plan.
+
+Hypotheses are a lightweight working hypothesis in Week 4. The deterministic
+runtime still permits or blocks every proposal.
 
 ---
 
@@ -61,6 +71,9 @@ modes:
 - evidence rules
 - completion rules
 - approval policy
+- initial investigation context (`InitialInvestigationContext`)
+- deterministic safety policy, including runtime-pinned `case_id`
+- final synthesis interface
 
 Differences in outcome should therefore be attributable as far as practical
 to the investigation strategy rather than unrelated configuration changes.
@@ -76,6 +89,72 @@ evaluation runner after an investigation run completes.
 
 The runtime investigation graph, diagnostic services, LLM, and completion
 evaluator must never read evaluation ground truth.
+
+## Evaluation Inputs and Preregistration
+
+Three kinds of evaluation input are kept separate:
+
+1. **Frozen synthetic incident data** (`evaluation/cases/`, frozen at
+   `eval-cases-v1` = `8101a4567fd8596514209a6ebe9b71c16dbb998c`): manifests and
+   observable records. Runtime-visible through the diagnostic tools and the
+   incident brief.
+2. **Preregistered runtime-visible initial conditions**
+   (`evaluation/preregistration/eval-preregistration-v1.yaml`, loaded by
+   `tracepilot.evaluation.preregistration`): one `InitialInvestigationContext`
+   per case and the shared budget and timeout. The same context is passed to
+   Fixed Playbook, Plan Once, and Adaptive; there is no mode-specific context.
+3. **Hidden evaluation ground truth** (`evaluation/ground_truth/`): read only by
+   the evaluation layer, never by the runtime or by the preregistration loader.
+
+### Initial context construction rule
+
+For every case except INC-015 (human-approved, deterministic):
+
+- `focus_services`: the frozen manifest's `affected_services`, in manifest order;
+- `initial_question`: `What explains the observed incident symptoms: {symptom}`,
+  with the frozen manifest `symptom` inserted verbatim;
+- `tool_constraints`: none.
+
+Two cases differ:
+
+- INC-013: the default rule plus exactly one constraint,
+  `get_deployment_history` for `checkout-api` from `2026-04-06T13:50:00Z` to
+  `2026-04-06T14:15:00Z`. It narrows only the initial checkout deployment-history
+  search; no other tool or service is windowed.
+- INC-015: the pre-approved context, `focus_services: [billing-api]` and
+  `What explains the billing-api slowdown and invoice failures?`, with no
+  constraint.
+
+No other case has a tool constraint, and there is no global initial time window.
+
+### Shared conditions and validation
+
+Budget and timeout are code-authoritative (`MAX_AGENT_STEPS = 15`,
+`DEFAULT_TOOL_TIMEOUT_SECONDS = 10.0`). The preregistration records the same
+values and loading fails if they drift. The tool set is not duplicated in the
+file; `ALLOWED_TOOLS` and `verify_tool_set` enforce it at runtime.
+
+The loader parses the YAML strictly (no anchors, aliases, merge keys, or
+duplicate keys), rejects unknown fields and answer-key field names, requires the
+preregistered case IDs to equal the frozen case IDs supplied by the caller, and
+checks that every context produces a valid Fixed Playbook.
+
+A later evaluation report records the preregistration identifier
+(`eval-preregistration-v1`), the SHA-256 of the YAML file bytes, the git commit,
+and the frozen case baseline (`eval-cases-v1` /
+`8101a4567fd8596514209a6ebe9b71c16dbb998c`). The `eval-preregistration-v1` tag is
+created at the Week 4 final gate, not before.
+
+### Fairness verification (Week 4)
+
+Before evaluation, `tests/evaluation/test_three_mode_fairness.py` verifies
+experimental integrity, not effectiveness: all-case structural and input checks
+(case coverage, runtime-safe incident brief, mode-independent context, equal
+Plan Once and Adaptive first provider views), all-case Fixed runtime checks, and
+representative cross-mode lifecycle runs (INC-001, INC-004, INC-013, INC-015,
+chosen for structural reasons). Every comparison enters through
+`run_investigation`; provider call counts, action sequences, and other
+control-policy outcomes are not compared across modes.
 
 ## Case Taxonomy
 
@@ -262,7 +341,8 @@ Invalid-run handling must not be used to remove unfavorable system behavior.
 
 ### Behavior
 
-- replan count
+- replan count (Adaptive REPLACE decisions, from the plan-decision trace)
+- plan-review decisions, split into KEEP and REPLACE
 - successful replan
 - unnecessary tool calls
 - duplicate non-recovery calls
@@ -301,10 +381,32 @@ Semantic recovery (INC-013 to INC-015):
 
 ## Metric Interpretation
 
+### Agent Steps (`agent_steps`)
+
+One agent step is one control-policy action attempt. A step is consumed when the
+mode attempts an investigation action, including a permitted tool request, a
+duplicate request blocked by policy, or an invalid/forbidden request blocked by
+policy.
+
+`agent_steps`, `logical_tool_calls`, and `execution_attempts` are separate
+counts:
+
+- A blocked invalid, forbidden, or duplicate action proposal consumes one agent
+  step but does not increment logical tool calls or execution attempts.
+- A policy-permitted tool action that proceeds to MCP execution consumes one
+  agent step and increments both logical tool calls and execution attempts.
+
+The provisional maximum is 15 agent steps (see `docs/security-model.md`). The
+budget applies to investigation action attempts. Planning, plan-review, and
+final synthesis provider calls do not themselves consume it; they are counted
+per operation by the provider-call accounting described in
+`docs/architecture.md` (Adaptive Decision Trace and Provider Accounting).
+
 ### Logical Tool Calls
 
 Counts diagnostic operations intentionally requested by the investigation
-logic.
+logic that are permitted by deterministic policy and proceed to MCP execution.
+Blocked invalid, forbidden, or duplicate proposals are not logical tool calls.
 
 A retry of the same logical operation does not create a new logical tool
 call when it is explicitly classified as a runtime retry.

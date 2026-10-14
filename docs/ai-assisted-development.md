@@ -86,8 +86,12 @@ construction from an untrusted string bypassed it. All 349 existing
 tests passed; no test covered this.
 
 ### Why it matters
-From Week 4, case_id is supplied by the LLM through MCP. A malformed
-or injected value could reach the answer key.
+case_id crosses the MCP boundary as a tool argument. A malformed or
+injected value could reach the answer key.
+
+Correction (Week 4): the investigation runtime owns and pins case_id;
+the LLM does not choose or change it. The repository-level check remains
+as defense in depth.
 
 ### Fix
 CaseRepository rejects any case_id that is not a single path component.

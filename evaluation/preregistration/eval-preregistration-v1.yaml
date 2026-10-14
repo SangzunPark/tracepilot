@@ -1,0 +1,147 @@
+# Evaluation preregistration v1: runtime-visible initial conditions shared by
+# Fixed Playbook, Plan Once, and Adaptive. Contains no ground truth.
+#
+# Default rule (human-approved), applied to every case except INC-015:
+#   focus_services   = the frozen manifest's affected_services, in manifest order
+#   initial_question = "What explains the observed incident symptoms: {symptom}"
+#                      with the frozen manifest symptom inserted verbatim
+#   tool_constraints = []
+# INC-013 additionally has one checkout deployment-history time constraint.
+# INC-015 uses its pre-approved context.
+# Budget and timeout are code-authoritative; the loader rejects any drift.
+
+preregistration: eval-preregistration-v1
+schema_version: 1
+
+shared:
+  max_agent_steps: 15
+  tool_timeout_seconds: 10.0
+
+cases:
+  - case_id: INC-001
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-002
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-003
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-004
+    initial_context:
+      focus_services:
+        - authentication-service
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Users began experiencing login failures, and checkout requests began failing as well."
+      tool_constraints: []
+  - case_id: INC-005
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-006
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the observed incident symptoms: Billing API requests began failing as workers restarted repeatedly."
+      tool_constraints: []
+  - case_id: INC-007
+    initial_context:
+      focus_services:
+        - authentication-service
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests requiring login began failing."
+      tool_constraints: []
+  - case_id: INC-008
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the observed incident symptoms: Billing API invoice batch jobs began timing out."
+      tool_constraints: []
+  - case_id: INC-009
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-010
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-011
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began returning elevated HTTP 500 responses."
+      tool_constraints: []
+  - case_id: INC-012
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the observed incident symptoms: Billing invoice submissions began failing with authorization errors."
+      tool_constraints: []
+  - case_id: INC-013
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests began showing elevated latency and failures."
+      tool_constraints:
+        - tool: get_deployment_history
+          service: checkout-api
+          start_time: "2026-04-06T13:50:00Z"
+          end_time: "2026-04-06T14:15:00Z"
+  - case_id: INC-014
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout requests requiring authentication began failing."
+      tool_constraints: []
+  - case_id: INC-015
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the billing-api slowdown and invoice failures?"
+      tool_constraints: []
+  - case_id: INC-016
+    initial_context:
+      focus_services:
+        - authentication-service
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Users experienced login failures and checkout requests requiring authentication also began failing."
+      tool_constraints: []
+  - case_id: INC-017
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout payment requests began timing out and failing."
+      tool_constraints: []
+  - case_id: INC-018
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the observed incident symptoms: Billing requests became slow and payment-related failures increased."
+      tool_constraints: []
+  - case_id: INC-019
+    initial_context:
+      focus_services:
+        - checkout-api
+      initial_question: "What explains the observed incident symptoms: Checkout latency and failures increased after a period of normal operation."
+      tool_constraints: []
+  - case_id: INC-020
+    initial_context:
+      focus_services:
+        - billing-api
+      initial_question: "What explains the observed incident symptoms: Invoice submissions began timing out and failing."
+      tool_constraints: []
